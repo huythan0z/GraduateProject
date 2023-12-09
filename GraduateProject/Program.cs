@@ -15,8 +15,6 @@ namespace GraduateProject
         {
             public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
             {
-                SetMaterialForm materialForm = new SetMaterialForm();
-                materialForm.Show();
                 return Result.Succeeded;
             }
         }
