@@ -34,7 +34,7 @@ namespace GraduateProject
             this.Floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectColumnButton = new System.Windows.Forms.Button();
+            this.selectBeamButton = new System.Windows.Forms.Button();
             this.setMaterialButton = new System.Windows.Forms.Button();
             this.selectSteelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listItem)).BeginInit();
@@ -84,14 +84,14 @@ namespace GraduateProject
             this.Height.Name = "Height";
             this.Height.Width = 125;
             // 
-            // selectColumnButton
+            // selectBeamButton
             // 
-            this.selectColumnButton.Location = new System.Drawing.Point(587, 12);
-            this.selectColumnButton.Name = "selectColumnButton";
-            this.selectColumnButton.Size = new System.Drawing.Size(100, 50);
-            this.selectColumnButton.TabIndex = 1;
-            this.selectColumnButton.Text = "Chọn cột";
-            this.selectColumnButton.UseVisualStyleBackColor = true;
+            this.selectBeamButton.Location = new System.Drawing.Point(587, 12);
+            this.selectBeamButton.Name = "selectBeamButton";
+            this.selectBeamButton.Size = new System.Drawing.Size(100, 50);
+            this.selectBeamButton.TabIndex = 1;
+            this.selectBeamButton.Text = "Chọn Dầm";
+            this.selectBeamButton.UseVisualStyleBackColor = true;
             // 
             // setMaterialButton
             // 
@@ -101,6 +101,7 @@ namespace GraduateProject
             this.setMaterialButton.TabIndex = 2;
             this.setMaterialButton.Text = "Thêm vật liệu";
             this.setMaterialButton.UseVisualStyleBackColor = true;
+            this.setMaterialButton.Click += new System.EventHandler(this.setMaterialButton_Click);
             // 
             // selectSteelButton
             // 
@@ -110,6 +111,7 @@ namespace GraduateProject
             this.selectSteelButton.TabIndex = 3;
             this.selectSteelButton.Text = "Chọn thép";
             this.selectSteelButton.UseVisualStyleBackColor = true;
+            this.selectSteelButton.Click += new System.EventHandler(this.selectSteelButton_Click);
             // 
             // MainForm
             // 
@@ -118,7 +120,7 @@ namespace GraduateProject
             this.ClientSize = new System.Drawing.Size(729, 248);
             this.Controls.Add(this.selectSteelButton);
             this.Controls.Add(this.setMaterialButton);
-            this.Controls.Add(this.selectColumnButton);
+            this.Controls.Add(this.selectBeamButton);
             this.Controls.Add(this.listItem);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -134,7 +136,7 @@ namespace GraduateProject
         private System.Windows.Forms.DataGridViewTextBoxColumn Floor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Width;
         private System.Windows.Forms.DataGridViewTextBoxColumn Height;
-        private System.Windows.Forms.Button selectColumnButton;
+        private System.Windows.Forms.Button selectBeamButton;
         private System.Windows.Forms.Button setMaterialButton;
         private System.Windows.Forms.Button selectSteelButton;
     }

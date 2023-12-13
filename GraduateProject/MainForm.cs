@@ -16,5 +16,19 @@ namespace GraduateProject
         {
             InitializeComponent();
         }
+
+        private void setMaterialButton_Click(object sender, EventArgs e)
+        {
+            SetMaterialForm setMaterial = new SetMaterialForm();
+            setMaterial.Show();
+            
+        }
+
+        private void selectSteelButton_Click(object sender, EventArgs e)
+        {
+            Caculate caculate = new Caculate();
+            caculate.Show();
+            
+        }
     }
 }

@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.Concrete = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.concreteType = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.typeConcreteCbb = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Steel = new System.Windows.Forms.GroupBox();
+            this.typeSteelCbb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,15 +51,16 @@
             this.label12 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.saveMaterial = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.Concrete.SuspendLayout();
             this.Steel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Concrete
             // 
+            this.Concrete.Controls.Add(this.typeConcreteCbb);
             this.Concrete.Controls.Add(this.label7);
             this.Concrete.Controls.Add(this.label6);
             this.Concrete.Controls.Add(this.label5);
@@ -68,7 +70,6 @@
             this.Concrete.Controls.Add(this.label3);
             this.Concrete.Controls.Add(this.textBox1);
             this.Concrete.Controls.Add(this.label2);
-            this.Concrete.Controls.Add(this.concreteType);
             this.Concrete.Controls.Add(this.label1);
             this.Concrete.Location = new System.Drawing.Point(12, 12);
             this.Concrete.Name = "Concrete";
@@ -77,53 +78,44 @@
             this.Concrete.TabStop = false;
             this.Concrete.Text = "Bê tông";
             // 
-            // label1
+            // typeConcreteCbb
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Loại :";
+            this.typeConcreteCbb.FormattingEnabled = true;
+            this.typeConcreteCbb.Items.AddRange(new object[] {
+            "B20",
+            "B25",
+            "B30"});
+            this.typeConcreteCbb.Location = new System.Drawing.Point(55, 22);
+            this.typeConcreteCbb.Name = "typeConcreteCbb";
+            this.typeConcreteCbb.Size = new System.Drawing.Size(154, 24);
+            this.typeConcreteCbb.TabIndex = 12;
             // 
-            // concreteType
+            // label7
             // 
-            this.concreteType.Location = new System.Drawing.Point(55, 26);
-            this.concreteType.Name = "concreteType";
-            this.concreteType.Size = new System.Drawing.Size(100, 22);
-            this.concreteType.TabIndex = 1;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(161, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 17);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "kN/m2";
             // 
-            // textBox1
+            // label6
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(161, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "kN/m2";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Rb :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(55, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Rbt :";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(161, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "kN/m2";
             // 
             // textBox3
             // 
@@ -141,35 +133,50 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Eb :";
             // 
-            // label5
+            // textBox2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(161, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "kN/m2";
+            this.textBox2.Location = new System.Drawing.Point(55, 82);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 5;
             // 
-            // label6
+            // label3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(161, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "kN/m2";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Rbt :";
             // 
-            // label7
+            // textBox1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(161, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 17);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "kN/m2";
+            this.textBox1.Location = new System.Drawing.Point(55, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Rb :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Loại :";
             // 
             // Steel
             // 
+            this.Steel.Controls.Add(this.typeSteelCbb);
             this.Steel.Controls.Add(this.label8);
             this.Steel.Controls.Add(this.label9);
             this.Steel.Controls.Add(this.label10);
@@ -179,14 +186,24 @@
             this.Steel.Controls.Add(this.label12);
             this.Steel.Controls.Add(this.textBox6);
             this.Steel.Controls.Add(this.label13);
-            this.Steel.Controls.Add(this.textBox7);
             this.Steel.Controls.Add(this.label14);
             this.Steel.Location = new System.Drawing.Point(270, 12);
             this.Steel.Name = "Steel";
             this.Steel.Size = new System.Drawing.Size(228, 152);
             this.Steel.TabIndex = 11;
             this.Steel.TabStop = false;
-            this.Steel.Text = "Bê tông";
+            this.Steel.Text = "Thép";
+            // 
+            // typeSteelCbb
+            // 
+            this.typeSteelCbb.FormattingEnabled = true;
+            this.typeSteelCbb.Items.AddRange(new object[] {
+            "CB300V",
+            "CB400V"});
+            this.typeSteelCbb.Location = new System.Drawing.Point(55, 22);
+            this.typeSteelCbb.Name = "typeSteelCbb";
+            this.typeSteelCbb.Size = new System.Drawing.Size(154, 24);
+            this.typeSteelCbb.TabIndex = 11;
             // 
             // label8
             // 
@@ -227,9 +244,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 113);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 17);
+            this.label11.Size = new System.Drawing.Size(32, 17);
             this.label11.TabIndex = 6;
-            this.label11.Text = "Eb :";
+            this.label11.Text = "Es :";
             // 
             // textBox5
             // 
@@ -243,9 +260,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 85);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 17);
+            this.label12.Size = new System.Drawing.Size(40, 17);
             this.label12.TabIndex = 4;
-            this.label12.Text = "Rbt :";
+            this.label12.Text = "Rsc :";
             // 
             // textBox6
             // 
@@ -259,16 +276,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 57);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 17);
+            this.label13.Size = new System.Drawing.Size(33, 17);
             this.label13.TabIndex = 2;
-            this.label13.Text = "Rb :";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(55, 26);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 1;
+            this.label13.Text = "Rs :";
             // 
             // label14
             // 
@@ -281,18 +291,29 @@
             // 
             // saveMaterial
             // 
-            this.saveMaterial.Location = new System.Drawing.Point(186, 181);
+            this.saveMaterial.Location = new System.Drawing.Point(355, 175);
             this.saveMaterial.Name = "saveMaterial";
             this.saveMaterial.Size = new System.Drawing.Size(143, 40);
             this.saveMaterial.TabIndex = 12;
             this.saveMaterial.Text = "Lưu vật liệu";
             this.saveMaterial.UseVisualStyleBackColor = true;
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(12, 175);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(143, 40);
+            this.backButton.TabIndex = 13;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // SetMaterialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 240);
+            this.ClientSize = new System.Drawing.Size(519, 227);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.saveMaterial);
             this.Controls.Add(this.Steel);
             this.Controls.Add(this.Concrete);
@@ -310,7 +331,6 @@
 
         private System.Windows.Forms.GroupBox Concrete;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox concreteType;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
@@ -330,9 +350,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button saveMaterial;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.ComboBox typeSteelCbb;
+        private System.Windows.Forms.ComboBox typeConcreteCbb;
     }
 }
 

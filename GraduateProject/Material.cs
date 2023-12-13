@@ -16,5 +16,11 @@ namespace GraduateProject
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+                  
+        }
     }
 }

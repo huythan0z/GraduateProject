@@ -15,6 +15,9 @@ namespace GraduateProject
         {
             public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
             {
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                mainForm.StartPosition = FormStartPosition.CenterScreen;
                 return Result.Succeeded;
             }
         }
