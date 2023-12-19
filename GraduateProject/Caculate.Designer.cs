@@ -78,15 +78,17 @@ namespace GraduateProject
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.mEdgeTxt = new System.Windows.Forms.TextBox();
             this.mCenterTxt = new System.Windows.Forms.TextBox();
+            this.mEdgeTxt = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.concreteCbb = new System.Windows.Forms.ComboBox();
-            this.steelCbb = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.steelCbb = new System.Windows.Forms.ComboBox();
+            this.concreteCbb = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.showInfoButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -130,7 +132,7 @@ namespace GraduateProject
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(209, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tầng";
             // 
@@ -139,7 +141,7 @@ namespace GraduateProject
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dầm";
             // 
@@ -172,7 +174,7 @@ namespace GraduateProject
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 17);
+            this.label6.Size = new System.Drawing.Size(14, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "μ";
             // 
@@ -188,7 +190,7 @@ namespace GraduateProject
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 88);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Diện tích";
             // 
@@ -197,7 +199,7 @@ namespace GraduateProject
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Đường kính";
             // 
@@ -221,7 +223,7 @@ namespace GraduateProject
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Số thanh";
             // 
@@ -254,7 +256,7 @@ namespace GraduateProject
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(9, 110);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 17);
+            this.label10.Size = new System.Drawing.Size(21, 16);
             this.label10.TabIndex = 12;
             this.label10.Text = "L2";
             // 
@@ -270,7 +272,7 @@ namespace GraduateProject
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(9, 82);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 17);
+            this.label9.Size = new System.Drawing.Size(21, 16);
             this.label9.TabIndex = 10;
             this.label9.Text = "L1";
             // 
@@ -279,7 +281,7 @@ namespace GraduateProject
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(7, 52);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 17);
+            this.label8.Size = new System.Drawing.Size(73, 16);
             this.label8.TabIndex = 9;
             this.label8.Text = "Đường kính";
             // 
@@ -303,7 +305,7 @@ namespace GraduateProject
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(9, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.Size = new System.Drawing.Size(63, 16);
             this.label7.TabIndex = 8;
             this.label7.Text = "Số nhánh";
             // 
@@ -325,7 +327,7 @@ namespace GraduateProject
             this.groupBox4.Size = new System.Drawing.Size(234, 191);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Thông tin cột";
+            this.groupBox4.Text = "Thông tin dầm";
             // 
             // conditionLabel
             // 
@@ -333,7 +335,7 @@ namespace GraduateProject
             this.conditionLabel.BackColor = System.Drawing.Color.White;
             this.conditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.conditionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.conditionLabel.Location = new System.Drawing.Point(73, 153);
+            this.conditionLabel.Location = new System.Drawing.Point(72, 159);
             this.conditionLabel.Name = "conditionLabel";
             this.conditionLabel.Size = new System.Drawing.Size(83, 20);
             this.conditionLabel.TabIndex = 19;
@@ -352,7 +354,7 @@ namespace GraduateProject
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(161, 102);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 17);
+            this.label11.Size = new System.Drawing.Size(39, 16);
             this.label11.TabIndex = 17;
             this.label11.Text = "μmax";
             // 
@@ -368,7 +370,7 @@ namespace GraduateProject
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(142, 30);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(14, 17);
+            this.label15.Size = new System.Drawing.Size(13, 16);
             this.label15.TabIndex = 15;
             this.label15.Text = "x";
             // 
@@ -392,7 +394,7 @@ namespace GraduateProject
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(38, 102);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 17);
+            this.label12.Size = new System.Drawing.Size(35, 16);
             this.label12.TabIndex = 10;
             this.label12.Text = "μmin";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -402,7 +404,7 @@ namespace GraduateProject
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(7, 68);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 17);
+            this.label13.Size = new System.Drawing.Size(73, 16);
             this.label13.TabIndex = 9;
             this.label13.Text = "As yêu cầu";
             // 
@@ -418,7 +420,7 @@ namespace GraduateProject
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(9, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 17);
+            this.label14.Size = new System.Drawing.Size(34, 16);
             this.label14.TabIndex = 8;
             this.label14.Text = "b x h";
             // 
@@ -487,7 +489,7 @@ namespace GraduateProject
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(6, 116);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(16, 17);
+            this.label16.Size = new System.Drawing.Size(14, 16);
             this.label16.TabIndex = 6;
             this.label16.Text = "μ";
             // 
@@ -503,7 +505,7 @@ namespace GraduateProject
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(6, 88);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(63, 17);
+            this.label17.Size = new System.Drawing.Size(58, 16);
             this.label17.TabIndex = 4;
             this.label17.Text = "Diện tích";
             // 
@@ -512,7 +514,7 @@ namespace GraduateProject
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(6, 58);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 17);
+            this.label18.Size = new System.Drawing.Size(73, 16);
             this.label18.TabIndex = 3;
             this.label18.Text = "Đường kính";
             // 
@@ -536,7 +538,7 @@ namespace GraduateProject
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(6, 30);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(65, 17);
+            this.label19.Size = new System.Drawing.Size(59, 16);
             this.label19.TabIndex = 0;
             this.label19.Text = "Số thanh";
             // 
@@ -553,23 +555,12 @@ namespace GraduateProject
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Nội lực";
             // 
-            // label20
+            // mCenterTxt
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 17);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Momen tại gối";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 51);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(104, 17);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Momen tại nhịp";
+            this.mCenterTxt.Location = new System.Drawing.Point(128, 48);
+            this.mCenterTxt.Name = "mCenterTxt";
+            this.mCenterTxt.Size = new System.Drawing.Size(89, 22);
+            this.mCenterTxt.TabIndex = 3;
             // 
             // mEdgeTxt
             // 
@@ -578,12 +569,23 @@ namespace GraduateProject
             this.mEdgeTxt.Size = new System.Drawing.Size(89, 22);
             this.mEdgeTxt.TabIndex = 2;
             // 
-            // mCenterTxt
+            // label21
             // 
-            this.mCenterTxt.Location = new System.Drawing.Point(128, 48);
-            this.mCenterTxt.Name = "mCenterTxt";
-            this.mCenterTxt.Size = new System.Drawing.Size(89, 22);
-            this.mCenterTxt.TabIndex = 3;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(12, 51);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(97, 16);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Momen tại nhịp";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 16);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Momen tại gối";
             // 
             // groupBox7
             // 
@@ -597,23 +599,14 @@ namespace GraduateProject
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
             // 
-            // label22
+            // label23
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(29, 2);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(57, 17);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Bê tông";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // concreteCbb
-            // 
-            this.concreteCbb.FormattingEnabled = true;
-            this.concreteCbb.Location = new System.Drawing.Point(6, 28);
-            this.concreteCbb.Name = "concreteCbb";
-            this.concreteCbb.Size = new System.Drawing.Size(102, 24);
-            this.concreteCbb.TabIndex = 1;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(151, 2);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(39, 16);
+            this.label23.TabIndex = 3;
+            this.label23.Text = "Thép";
             // 
             // steelCbb
             // 
@@ -623,20 +616,49 @@ namespace GraduateProject
             this.steelCbb.Size = new System.Drawing.Size(102, 24);
             this.steelCbb.TabIndex = 2;
             // 
-            // label23
+            // concreteCbb
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(151, 2);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(41, 17);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "Thép";
+            this.concreteCbb.FormattingEnabled = true;
+            this.concreteCbb.Location = new System.Drawing.Point(6, 28);
+            this.concreteCbb.Name = "concreteCbb";
+            this.concreteCbb.Size = new System.Drawing.Size(102, 24);
+            this.concreteCbb.TabIndex = 1;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(29, 2);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 16);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Bê tông";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(637, 280);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(115, 49);
+            this.saveButton.TabIndex = 21;
+            this.saveButton.Text = "Lưu dữ liệu";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
+            // showInfoButton
+            // 
+            this.showInfoButton.Location = new System.Drawing.Point(516, 280);
+            this.showInfoButton.Name = "showInfoButton";
+            this.showInfoButton.Size = new System.Drawing.Size(115, 49);
+            this.showInfoButton.TabIndex = 22;
+            this.showInfoButton.Text = "Xem thông tin đã lưu";
+            this.showInfoButton.UseVisualStyleBackColor = true;
             // 
             // Caculate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 393);
+            this.Controls.Add(this.showInfoButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -728,5 +750,7 @@ namespace GraduateProject
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox steelCbb;
         private System.Windows.Forms.ComboBox concreteCbb;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button showInfoButton;
     }
 }

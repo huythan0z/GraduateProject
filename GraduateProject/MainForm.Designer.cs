@@ -30,13 +30,13 @@ namespace GraduateProject
         private void InitializeComponent()
         {
             this.listItem = new System.Windows.Forms.DataGridView();
+            this.selectBeamButton = new System.Windows.Forms.Button();
+            this.setMaterialButton = new System.Windows.Forms.Button();
+            this.selectSteelButton = new System.Windows.Forms.Button();
             this.columnIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Width = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selectBeamButton = new System.Windows.Forms.Button();
-            this.setMaterialButton = new System.Windows.Forms.Button();
-            this.selectSteelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,34 +55,6 @@ namespace GraduateProject
             this.listItem.RowTemplate.Height = 24;
             this.listItem.Size = new System.Drawing.Size(554, 198);
             this.listItem.TabIndex = 0;
-            // 
-            // columnIndex
-            // 
-            this.columnIndex.HeaderText = "Cột";
-            this.columnIndex.MinimumWidth = 6;
-            this.columnIndex.Name = "columnIndex";
-            this.columnIndex.Width = 125;
-            // 
-            // Floor
-            // 
-            this.Floor.HeaderText = "Tầng";
-            this.Floor.MinimumWidth = 6;
-            this.Floor.Name = "Floor";
-            this.Floor.Width = 125;
-            // 
-            // Width
-            // 
-            this.Width.HeaderText = "b";
-            this.Width.MinimumWidth = 6;
-            this.Width.Name = "Width";
-            this.Width.Width = 125;
-            // 
-            // Height
-            // 
-            this.Height.HeaderText = "h";
-            this.Height.MinimumWidth = 6;
-            this.Height.Name = "Height";
-            this.Height.Width = 125;
             // 
             // selectBeamButton
             // 
@@ -113,6 +85,34 @@ namespace GraduateProject
             this.selectSteelButton.UseVisualStyleBackColor = true;
             this.selectSteelButton.Click += new System.EventHandler(this.selectSteelButton_Click);
             // 
+            // columnIndex
+            // 
+            this.columnIndex.HeaderText = "ID dầm";
+            this.columnIndex.MinimumWidth = 6;
+            this.columnIndex.Name = "columnIndex";
+            this.columnIndex.Width = 125;
+            // 
+            // Floor
+            // 
+            this.Floor.HeaderText = "Tầng";
+            this.Floor.MinimumWidth = 6;
+            this.Floor.Name = "Floor";
+            this.Floor.Width = 125;
+            // 
+            // Width
+            // 
+            this.Width.HeaderText = "Chiều rộng b";
+            this.Width.MinimumWidth = 6;
+            this.Width.Name = "Width";
+            this.Width.Width = 125;
+            // 
+            // Height
+            // 
+            this.Height.HeaderText = "Chiều cao h";
+            this.Height.MinimumWidth = 6;
+            this.Height.Name = "Height";
+            this.Height.Width = 125;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -132,12 +132,12 @@ namespace GraduateProject
         #endregion
 
         private System.Windows.Forms.DataGridView listItem;
+        private System.Windows.Forms.Button selectBeamButton;
+        private System.Windows.Forms.Button setMaterialButton;
+        private System.Windows.Forms.Button selectSteelButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnIndex;
         private System.Windows.Forms.DataGridViewTextBoxColumn Floor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Width;
         private System.Windows.Forms.DataGridViewTextBoxColumn Height;
-        private System.Windows.Forms.Button selectBeamButton;
-        private System.Windows.Forms.Button setMaterialButton;
-        private System.Windows.Forms.Button selectSteelButton;
     }
 }
