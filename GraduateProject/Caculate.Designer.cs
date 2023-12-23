@@ -35,13 +35,10 @@ namespace GraduateProject
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.mTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.acreageTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numberSteelTxt = new System.Windows.Forms.TextBox();
-            this.listRadiusCbb = new System.Windows.Forms.ComboBox();
+            this.quantitySteelEdgeTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.distanceL2txt = new System.Windows.Forms.TextBox();
@@ -53,15 +50,12 @@ namespace GraduateProject
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.conditionLabel = new System.Windows.Forms.Label();
             this.mMaxTxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.AsRequireTxt = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.heightColumnTxt = new System.Windows.Forms.TextBox();
             this.mMinTxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.widthColumnTxt = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.checkButton = new System.Windows.Forms.Button();
@@ -69,13 +63,10 @@ namespace GraduateProject
             this.drawButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.quantitySteelCenterTxt = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.mCenterTxt = new System.Windows.Forms.TextBox();
@@ -89,6 +80,14 @@ namespace GraduateProject
             this.label22 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.showInfoButton = new System.Windows.Forms.Button();
+            this.radiusEdgeTxt = new System.Windows.Forms.TextBox();
+            this.radiusCentertxt = new System.Windows.Forms.TextBox();
+            this.resultEdgeTxt = new System.Windows.Forms.Label();
+            this.resultCenterTxt = new System.Windows.Forms.Label();
+            this.AsEdgeSelectTxt = new System.Windows.Forms.Label();
+            this.AsCenterSelectTxt = new System.Windows.Forms.Label();
+            this.muyEdgeTxt = new System.Windows.Forms.Label();
+            this.muyCenterTxt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -147,13 +146,14 @@ namespace GraduateProject
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.mTxt);
+            this.groupBox2.Controls.Add(this.muyEdgeTxt);
+            this.groupBox2.Controls.Add(this.AsEdgeSelectTxt);
+            this.groupBox2.Controls.Add(this.resultEdgeTxt);
+            this.groupBox2.Controls.Add(this.radiusEdgeTxt);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.acreageTxt);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.numberSteelTxt);
-            this.groupBox2.Controls.Add(this.listRadiusCbb);
+            this.groupBox2.Controls.Add(this.quantitySteelEdgeTxt);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(267, 83);
             this.groupBox2.Name = "groupBox2";
@@ -162,37 +162,23 @@ namespace GraduateProject
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thép tại gối";
             // 
-            // mTxt
-            // 
-            this.mTxt.Location = new System.Drawing.Point(95, 113);
-            this.mTxt.Name = "mTxt";
-            this.mTxt.Size = new System.Drawing.Size(121, 22);
-            this.mTxt.TabIndex = 7;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 16);
+            this.label6.Size = new System.Drawing.Size(20, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "μ";
-            // 
-            // acreageTxt
-            // 
-            this.acreageTxt.Location = new System.Drawing.Point(95, 85);
-            this.acreageTxt.Name = "acreageTxt";
-            this.acreageTxt.Size = new System.Drawing.Size(121, 22);
-            this.acreageTxt.TabIndex = 5;
+            this.label6.Text = "μ :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 88);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
+            this.label5.Size = new System.Drawing.Size(87, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Diện tích";
+            this.label5.Text = "Diện tích thép";
             // 
             // label4
             // 
@@ -203,20 +189,12 @@ namespace GraduateProject
             this.label4.TabIndex = 3;
             this.label4.Text = "Đường kính";
             // 
-            // numberSteelTxt
+            // quantitySteelEdgeTxt
             // 
-            this.numberSteelTxt.Location = new System.Drawing.Point(95, 27);
-            this.numberSteelTxt.Name = "numberSteelTxt";
-            this.numberSteelTxt.Size = new System.Drawing.Size(121, 22);
-            this.numberSteelTxt.TabIndex = 2;
-            // 
-            // listRadiusCbb
-            // 
-            this.listRadiusCbb.FormattingEnabled = true;
-            this.listRadiusCbb.Location = new System.Drawing.Point(95, 55);
-            this.listRadiusCbb.Name = "listRadiusCbb";
-            this.listRadiusCbb.Size = new System.Drawing.Size(121, 24);
-            this.listRadiusCbb.TabIndex = 1;
+            this.quantitySteelEdgeTxt.Location = new System.Drawing.Point(95, 27);
+            this.quantitySteelEdgeTxt.Name = "quantitySteelEdgeTxt";
+            this.quantitySteelEdgeTxt.Size = new System.Drawing.Size(121, 22);
+            this.quantitySteelEdgeTxt.TabIndex = 2;
             // 
             // label3
             // 
@@ -311,59 +289,37 @@ namespace GraduateProject
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.conditionLabel);
             this.groupBox4.Controls.Add(this.mMaxTxt);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.AsRequireTxt);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.heightColumnTxt);
             this.groupBox4.Controls.Add(this.mMinTxt);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.widthColumnTxt);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Location = new System.Drawing.Point(518, 83);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(234, 191);
+            this.groupBox4.Size = new System.Drawing.Size(234, 120);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin dầm";
-            // 
-            // conditionLabel
-            // 
-            this.conditionLabel.AutoSize = true;
-            this.conditionLabel.BackColor = System.Drawing.Color.White;
-            this.conditionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.conditionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.conditionLabel.Location = new System.Drawing.Point(72, 159);
-            this.conditionLabel.Name = "conditionLabel";
-            this.conditionLabel.Size = new System.Drawing.Size(83, 20);
-            this.conditionLabel.TabIndex = 19;
-            this.conditionLabel.Text = "Thỏa mãn";
-            this.conditionLabel.Click += new System.EventHandler(this.label16_Click);
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // mMaxTxt
             // 
-            this.mMaxTxt.Location = new System.Drawing.Point(158, 122);
+            this.mMaxTxt.Location = new System.Drawing.Point(119, 85);
             this.mMaxTxt.Name = "mMaxTxt";
-            this.mMaxTxt.Size = new System.Drawing.Size(44, 22);
+            this.mMaxTxt.Size = new System.Drawing.Size(85, 22);
             this.mMaxTxt.TabIndex = 18;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 102);
+            this.label11.Location = new System.Drawing.Point(142, 63);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 16);
             this.label11.TabIndex = 17;
             this.label11.Text = "μmax";
-            // 
-            // AsRequireTxt
-            // 
-            this.AsRequireTxt.Location = new System.Drawing.Point(96, 65);
-            this.AsRequireTxt.Name = "AsRequireTxt";
-            this.AsRequireTxt.Size = new System.Drawing.Size(121, 22);
-            this.AsRequireTxt.TabIndex = 16;
             // 
             // label15
             // 
@@ -384,29 +340,20 @@ namespace GraduateProject
             // 
             // mMinTxt
             // 
-            this.mMinTxt.Location = new System.Drawing.Point(32, 122);
+            this.mMinTxt.Location = new System.Drawing.Point(40, 85);
             this.mMinTxt.Name = "mMinTxt";
-            this.mMinTxt.Size = new System.Drawing.Size(44, 22);
+            this.mMinTxt.Size = new System.Drawing.Size(73, 22);
             this.mMinTxt.TabIndex = 11;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 102);
+            this.label12.Location = new System.Drawing.Point(56, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(35, 16);
             this.label12.TabIndex = 10;
             this.label12.Text = "μmin";
             this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 68);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 16);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "As yêu cầu";
             // 
             // widthColumnTxt
             // 
@@ -418,7 +365,7 @@ namespace GraduateProject
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 30);
+            this.label14.Location = new System.Drawing.Point(37, 30);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(34, 16);
             this.label14.TabIndex = 8;
@@ -432,6 +379,7 @@ namespace GraduateProject
             this.checkButton.TabIndex = 15;
             this.checkButton.Text = "Kiểm tra";
             this.checkButton.UseVisualStyleBackColor = true;
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
             // 
             // autoSetButton
             // 
@@ -462,13 +410,14 @@ namespace GraduateProject
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox2);
+            this.groupBox5.Controls.Add(this.muyCenterTxt);
+            this.groupBox5.Controls.Add(this.AsCenterSelectTxt);
+            this.groupBox5.Controls.Add(this.resultCenterTxt);
+            this.groupBox5.Controls.Add(this.radiusCentertxt);
             this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.textBox3);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.label18);
-            this.groupBox5.Controls.Add(this.textBox4);
-            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.quantitySteelCenterTxt);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Location = new System.Drawing.Point(267, 233);
             this.groupBox5.Name = "groupBox5";
@@ -477,37 +426,23 @@ namespace GraduateProject
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thép tại nhịp";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(95, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 7;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(6, 116);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 16);
+            this.label16.Size = new System.Drawing.Size(20, 16);
             this.label16.TabIndex = 6;
-            this.label16.Text = "μ";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(95, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 5;
+            this.label16.Text = "μ :";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(6, 88);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 16);
+            this.label17.Size = new System.Drawing.Size(87, 16);
             this.label17.TabIndex = 4;
-            this.label17.Text = "Diện tích";
+            this.label17.Text = "Diện tích thép";
             // 
             // label18
             // 
@@ -518,20 +453,12 @@ namespace GraduateProject
             this.label18.TabIndex = 3;
             this.label18.Text = "Đường kính";
             // 
-            // textBox4
+            // quantitySteelCenterTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(95, 27);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(95, 55);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 1;
+            this.quantitySteelCenterTxt.Location = new System.Drawing.Point(95, 27);
+            this.quantitySteelCenterTxt.Name = "quantitySteelCenterTxt";
+            this.quantitySteelCenterTxt.Size = new System.Drawing.Size(121, 22);
+            this.quantitySteelCenterTxt.TabIndex = 2;
             // 
             // label19
             // 
@@ -615,6 +542,7 @@ namespace GraduateProject
             this.steelCbb.Name = "steelCbb";
             this.steelCbb.Size = new System.Drawing.Size(102, 24);
             this.steelCbb.TabIndex = 2;
+            this.steelCbb.SelectedIndexChanged += new System.EventHandler(this.steelCbb_SelectedIndexChanged);
             // 
             // concreteCbb
             // 
@@ -623,6 +551,7 @@ namespace GraduateProject
             this.concreteCbb.Name = "concreteCbb";
             this.concreteCbb.Size = new System.Drawing.Size(102, 24);
             this.concreteCbb.TabIndex = 1;
+            this.concreteCbb.SelectedIndexChanged += new System.EventHandler(this.concreteCbb_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -652,6 +581,83 @@ namespace GraduateProject
             this.showInfoButton.TabIndex = 22;
             this.showInfoButton.Text = "Xem thông tin đã lưu";
             this.showInfoButton.UseVisualStyleBackColor = true;
+            // 
+            // radiusEdgeTxt
+            // 
+            this.radiusEdgeTxt.Location = new System.Drawing.Point(95, 57);
+            this.radiusEdgeTxt.Name = "radiusEdgeTxt";
+            this.radiusEdgeTxt.Size = new System.Drawing.Size(121, 22);
+            this.radiusEdgeTxt.TabIndex = 8;
+            // 
+            // radiusCentertxt
+            // 
+            this.radiusCentertxt.Location = new System.Drawing.Point(95, 55);
+            this.radiusCentertxt.Name = "radiusCentertxt";
+            this.radiusCentertxt.Size = new System.Drawing.Size(121, 22);
+            this.radiusCentertxt.TabIndex = 9;
+            // 
+            // resultEdgeTxt
+            // 
+            this.resultEdgeTxt.AutoSize = true;
+            this.resultEdgeTxt.Location = new System.Drawing.Point(104, 116);
+            this.resultEdgeTxt.Name = "resultEdgeTxt";
+            this.resultEdgeTxt.Size = new System.Drawing.Size(103, 16);
+            this.resultEdgeTxt.TabIndex = 9;
+            this.resultEdgeTxt.Text = "Không thỏa mãn";
+            // 
+            // resultCenterTxt
+            // 
+            this.resultCenterTxt.AutoSize = true;
+            this.resultCenterTxt.Location = new System.Drawing.Point(104, 116);
+            this.resultCenterTxt.Name = "resultCenterTxt";
+            this.resultCenterTxt.Size = new System.Drawing.Size(103, 16);
+            this.resultCenterTxt.TabIndex = 10;
+            this.resultCenterTxt.Text = "Không thỏa mãn";
+            this.resultCenterTxt.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // AsEdgeSelectTxt
+            // 
+            this.AsEdgeSelectTxt.AutoSize = true;
+            this.AsEdgeSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsEdgeSelectTxt.Location = new System.Drawing.Point(167, 88);
+            this.AsEdgeSelectTxt.Name = "AsEdgeSelectTxt";
+            this.AsEdgeSelectTxt.Size = new System.Drawing.Size(49, 16);
+            this.AsEdgeSelectTxt.TabIndex = 10;
+            this.AsEdgeSelectTxt.Text = "000000";
+            this.AsEdgeSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AsCenterSelectTxt
+            // 
+            this.AsCenterSelectTxt.AutoSize = true;
+            this.AsCenterSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsCenterSelectTxt.Location = new System.Drawing.Point(158, 88);
+            this.AsCenterSelectTxt.Name = "AsCenterSelectTxt";
+            this.AsCenterSelectTxt.Size = new System.Drawing.Size(49, 16);
+            this.AsCenterSelectTxt.TabIndex = 11;
+            this.AsCenterSelectTxt.Text = "000000";
+            this.AsCenterSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // muyEdgeTxt
+            // 
+            this.muyEdgeTxt.AutoSize = true;
+            this.muyEdgeTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.muyEdgeTxt.Location = new System.Drawing.Point(30, 117);
+            this.muyEdgeTxt.Name = "muyEdgeTxt";
+            this.muyEdgeTxt.Size = new System.Drawing.Size(49, 16);
+            this.muyEdgeTxt.TabIndex = 11;
+            this.muyEdgeTxt.Text = "000000";
+            this.muyEdgeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // muyCenterTxt
+            // 
+            this.muyCenterTxt.AutoSize = true;
+            this.muyCenterTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.muyCenterTxt.Location = new System.Drawing.Point(30, 116);
+            this.muyCenterTxt.Name = "muyCenterTxt";
+            this.muyCenterTxt.Size = new System.Drawing.Size(49, 16);
+            this.muyCenterTxt.TabIndex = 12;
+            this.muyCenterTxt.Text = "000000";
+            this.muyCenterTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Caculate
             // 
@@ -699,14 +705,11 @@ namespace GraduateProject
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox listItemCbb;
         private System.Windows.Forms.ComboBox listFloorCbb;
-        private System.Windows.Forms.ComboBox listRadiusCbb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox numberSteelTxt;
+        private System.Windows.Forms.TextBox quantitySteelEdgeTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox acreageTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox mTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
@@ -719,27 +722,21 @@ namespace GraduateProject
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox mMinTxt;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox widthColumnTxt;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox heightColumnTxt;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox AsRequireTxt;
         private System.Windows.Forms.TextBox mMaxTxt;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label conditionLabel;
         private System.Windows.Forms.Button checkButton;
         private System.Windows.Forms.Button autoSetButton;
         private System.Windows.Forms.Button drawButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox quantitySteelCenterTxt;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label21;
@@ -753,5 +750,13 @@ namespace GraduateProject
         private System.Windows.Forms.ComboBox concreteCbb;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button showInfoButton;
+        private System.Windows.Forms.TextBox radiusEdgeTxt;
+        private System.Windows.Forms.TextBox radiusCentertxt;
+        private System.Windows.Forms.Label resultEdgeTxt;
+        private System.Windows.Forms.Label resultCenterTxt;
+        private System.Windows.Forms.Label AsEdgeSelectTxt;
+        private System.Windows.Forms.Label AsCenterSelectTxt;
+        private System.Windows.Forms.Label muyEdgeTxt;
+        private System.Windows.Forms.Label muyCenterTxt;
     }
 }

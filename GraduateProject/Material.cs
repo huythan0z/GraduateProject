@@ -34,7 +34,6 @@ namespace GraduateProject
             this.Close();
                   
         }
-        private string newString;
         private void saveMaterial_Click(object sender, EventArgs e)
         {
             Steel steel = new Steel();
