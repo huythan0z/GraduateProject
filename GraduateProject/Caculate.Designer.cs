@@ -642,6 +642,7 @@ namespace GraduateProject
             this.saveButton.TabIndex = 21;
             this.saveButton.Text = "Lưu dữ liệu";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // showInfoButton
             // 

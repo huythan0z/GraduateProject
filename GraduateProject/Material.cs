@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GraduateProject
 {
@@ -14,13 +15,45 @@ namespace GraduateProject
     {
         public SetMaterialForm()
         {
+
             InitializeComponent();
         }
-
+        public SetMaterialForm(string name) : this()
+        {
+            foreach (var item in Enum.GetValues(typeof(ConcreteType)))
+            {
+                typeConcreteCbb.Items.Add(item);
+            }
+            foreach (var item in Enum.GetValues(typeof(SteelType)))
+            {
+                typeSteelCbb.Items.Add(item);
+            }
+        }
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
                   
+        }
+        private void saveMaterial_Click(object sender, EventArgs e)
+        {
+            Steel steel = new Steel();
+            MessageBox.Show(typeSteelCbb.SelectedText);
+            steel.steelType = (SteelType)Enum.Parse(typeof(SteelType), typeSteelCbb.SelectedText);
+            Concrete concrete = new Concrete()
+            {
+                concreteType = (ConcreteType)Enum.Parse(typeof(SteelType), typeConcreteCbb.SelectedText),
+            };
+            Singleton.Instance.AddMaterialToData(concrete, steel);
+        }
+
+        private void typeConcreteCbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void typeSteelCbb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

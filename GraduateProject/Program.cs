@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -14,27 +15,50 @@ namespace GraduateProject
     {
         [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
         public class Class1 : IExternalCommand
-        {
+        {   
+            private List<FrameData> framingDatas = new List<FrameData>();
             public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
             {
-                MainForm mainForm = new MainForm();
-                mainForm.StartPosition = FormStartPosition.CenterScreen;
+                GetAllItem(commandData);
+                MainForm mainForm = new MainForm(framingDatas);
                 mainForm.Show();
                 return Result.Succeeded;
-
-
             }
-            private IEnumerator Coroutine()
+
+            private void GetAllItem(ExternalCommandData commandData)
             {
-                float startTime = 0;
-                float endTime = 10;
-                while(startTime < endTime)
+                UIDocument uiDoc = commandData.Application.ActiveUIDocument;
+                FilteredElementCollector col = new FilteredElementCollector(uiDoc.Document);
+                //Lấy danh sách dầm
+                ElementCategoryFilter frames = new ElementCategoryFilter(BuiltInCategory.OST_StructuralFraming);
+                IList<Element> frameList = col.WherePasses(frames).WhereElementIsNotElementType().ToElements();
+                //Log check 
+                StringBuilder outPut = new StringBuilder($"Số lượng : {frameList.Count} \n");
+                foreach (Element item in frameList)
                 {
-                    //startTime += Time
-                    yield return null;
-
+                    string elementName = item.Id.IntegerValue.ToString();
+                    ElementType type = uiDoc.Document.GetElement(item.GetTypeId()) as ElementType;
+                    Parameter h = type.LookupParameter("h");
+                    Parameter b = type.LookupParameter("b");
+                    outPut.Append(elementName);
+                    outPut.AppendLine();
+                    var data = new FrameData()
+                    {
+                        Id = item.Id.IntegerValue,
+                        Level = item.LevelId.IntegerValue,
+                        width = ConvertFeetToMili(b.AsDouble()),
+                        height = ConvertFeetToMili(h.AsDouble())
+                    };
+                    framingDatas.Add(data);
                 }
+                MessageBox.Show(outPut.ToString());
             }
+            private double ConvertFeetToMili(double value)
+            {
+                double newValue = Math.Round(UnitUtils.Convert(value, DisplayUnitType.DUT_DECIMAL_FEET, DisplayUnitType.DUT_MILLIMETERS), 2);
+                return newValue;
+            }
+
         }
 
     }

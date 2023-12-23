@@ -76,6 +76,7 @@
     <Compile Include="Caculate.Designer.cs">
       <DependentUpon>Caculate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Singleton.cs" />
     <EmbeddedResource Include="Material.resx">
       <DependentUpon>Material.cs</DependentUpon>
     </EmbeddedResource>

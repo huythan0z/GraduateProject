@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace GraduateProject
 {
+    public class FrameData
+    {
+        public int Id;
+        public int Level;
+        public double width;
+        public double height;
+    }
     public static class DataMaterial
     {
         
@@ -14,17 +21,17 @@ namespace GraduateProject
     public class Concrete
     {
         public ConcreteType concreteType;
-        public float Rb;
-        public float Rbt;
-        public float Eb;
+        public float Rb = 0;
+        public float Rbt = 0;
+        public float Eb = 0;
     }
 
     public class Steel
     {
         public SteelType steelType;
-        public List<float> Rs = new List<float> {5,10,15, 20};
-        public float Rsc;
-        public float Es;
+        public float Rs = 0;
+        public float Rsc = 0;
+        public float Es = 0;
     }
     public enum ConcreteType
     {
