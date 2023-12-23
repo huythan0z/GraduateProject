@@ -27,8 +27,8 @@ namespace GraduateProject
         public List<Steel> SteelDatas = new List<Steel>();
         public void AddMaterialToData(Concrete concrete, Steel steel)
         {
-            var newConcrete = ConcreteDatas.Find(x => x.concreteType == concrete.concreteType);
-            if (newConcrete == null) 
+            var newConcrete = ConcreteDatas.Find(x => x.type == concrete.type);
+            if (newConcrete == null)
             {
                 ConcreteDatas.Add(concrete);
             }
@@ -36,15 +36,15 @@ namespace GraduateProject
             {
                 for (int i = 0; i < ConcreteDatas.Count; i++)
                 {
-                    if (concrete.concreteType == ConcreteDatas[i].concreteType)
+                    if (concrete.type == ConcreteDatas[i].type)
                     {
                         ConcreteDatas[i] = concrete;
                     }
                 }
             }
-           
-            var newSteel = SteelDatas.Find(x => x.steelType == steel.steelType);
-            if (steel == null)
+
+            var newSteel = SteelDatas.Find(x => x.type == steel.type);
+            if (newSteel == null)
             {
                 SteelDatas.Add(steel);
             }
@@ -52,7 +52,7 @@ namespace GraduateProject
             {
                 for (int i = 0; i < SteelDatas.Count; i++)
                 {
-                    if (steel.steelType == SteelDatas[i].steelType)
+                    if (steel.type == SteelDatas[i].type)
                     {
                         SteelDatas[i] = steel;
                     }
@@ -63,7 +63,7 @@ namespace GraduateProject
         {
             for (int i = 0; i < ConcreteDatas.Count; i++)
             {
-                if (type == ConcreteDatas[i].concreteType)
+                if (type == ConcreteDatas[i].type)
                 {
                     return ConcreteDatas[i];
                 }
@@ -75,7 +75,7 @@ namespace GraduateProject
         {
             for (int i = 0; i < ConcreteDatas.Count; i++)
             {
-                if (type == SteelDatas[i].steelType)
+                if (type == SteelDatas[i].type)
                 {
                     return SteelDatas[i];
                 }

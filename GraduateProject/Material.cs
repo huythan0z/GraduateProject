@@ -34,26 +34,23 @@ namespace GraduateProject
             this.Close();
                   
         }
+        private string newString;
         private void saveMaterial_Click(object sender, EventArgs e)
         {
             Steel steel = new Steel();
-            MessageBox.Show(typeSteelCbb.SelectedText);
-            steel.steelType = (SteelType)Enum.Parse(typeof(SteelType), typeSteelCbb.SelectedText);
-            Concrete concrete = new Concrete()
-            {
-                concreteType = (ConcreteType)Enum.Parse(typeof(SteelType), typeConcreteCbb.SelectedText),
-            };
+            steel.type = (SteelType)Enum.Parse(typeof(SteelType), typeSteelCbb.SelectedItem.ToString());
+            Concrete concrete = new Concrete();
+            concrete.type = (ConcreteType)Enum.Parse(typeof(ConcreteType), typeConcreteCbb.SelectedItem.ToString());
             Singleton.Instance.AddMaterialToData(concrete, steel);
         }
 
         private void typeConcreteCbb_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void typeSteelCbb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
         }
     }
 }

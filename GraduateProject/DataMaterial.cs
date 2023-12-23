@@ -20,7 +20,7 @@ namespace GraduateProject
     }
     public class Concrete
     {
-        public ConcreteType concreteType;
+        public ConcreteType type = ConcreteType.B10;
         public float Rb = 0;
         public float Rbt = 0;
         public float Eb = 0;
@@ -28,7 +28,7 @@ namespace GraduateProject
 
     public class Steel
     {
-        public SteelType steelType;
+        public SteelType type = SteelType.CB300V;
         public float Rs = 0;
         public float Rsc = 0;
         public float Es = 0;
