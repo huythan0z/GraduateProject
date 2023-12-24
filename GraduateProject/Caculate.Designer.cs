@@ -35,6 +35,10 @@ namespace GraduateProject
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.muyEdgeTxt = new System.Windows.Forms.Label();
+            this.AsEdgeSelectTxt = new System.Windows.Forms.Label();
+            this.resultEdgeTxt = new System.Windows.Forms.Label();
+            this.radiusEdgeTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,6 +67,10 @@ namespace GraduateProject
             this.drawButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.muyCenterTxt = new System.Windows.Forms.Label();
+            this.AsCenterSelectTxt = new System.Windows.Forms.Label();
+            this.resultCenterTxt = new System.Windows.Forms.Label();
+            this.radiusCentertxt = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -80,14 +88,6 @@ namespace GraduateProject
             this.label22 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.showInfoButton = new System.Windows.Forms.Button();
-            this.radiusEdgeTxt = new System.Windows.Forms.TextBox();
-            this.radiusCentertxt = new System.Windows.Forms.TextBox();
-            this.resultEdgeTxt = new System.Windows.Forms.Label();
-            this.resultCenterTxt = new System.Windows.Forms.Label();
-            this.AsEdgeSelectTxt = new System.Windows.Forms.Label();
-            this.AsCenterSelectTxt = new System.Windows.Forms.Label();
-            this.muyEdgeTxt = new System.Windows.Forms.Label();
-            this.muyCenterTxt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -161,6 +161,44 @@ namespace GraduateProject
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thép tại gối";
+            // 
+            // muyEdgeTxt
+            // 
+            this.muyEdgeTxt.AutoSize = true;
+            this.muyEdgeTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.muyEdgeTxt.Location = new System.Drawing.Point(30, 117);
+            this.muyEdgeTxt.Name = "muyEdgeTxt";
+            this.muyEdgeTxt.Size = new System.Drawing.Size(49, 16);
+            this.muyEdgeTxt.TabIndex = 11;
+            this.muyEdgeTxt.Text = "000000";
+            this.muyEdgeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AsEdgeSelectTxt
+            // 
+            this.AsEdgeSelectTxt.AutoSize = true;
+            this.AsEdgeSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsEdgeSelectTxt.Location = new System.Drawing.Point(167, 88);
+            this.AsEdgeSelectTxt.Name = "AsEdgeSelectTxt";
+            this.AsEdgeSelectTxt.Size = new System.Drawing.Size(49, 16);
+            this.AsEdgeSelectTxt.TabIndex = 10;
+            this.AsEdgeSelectTxt.Text = "000000";
+            this.AsEdgeSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // resultEdgeTxt
+            // 
+            this.resultEdgeTxt.AutoSize = true;
+            this.resultEdgeTxt.Location = new System.Drawing.Point(104, 116);
+            this.resultEdgeTxt.Name = "resultEdgeTxt";
+            this.resultEdgeTxt.Size = new System.Drawing.Size(103, 16);
+            this.resultEdgeTxt.TabIndex = 9;
+            this.resultEdgeTxt.Text = "Không thỏa mãn";
+            // 
+            // radiusEdgeTxt
+            // 
+            this.radiusEdgeTxt.Location = new System.Drawing.Point(95, 57);
+            this.radiusEdgeTxt.Name = "radiusEdgeTxt";
+            this.radiusEdgeTxt.Size = new System.Drawing.Size(121, 22);
+            this.radiusEdgeTxt.TabIndex = 8;
             // 
             // label6
             // 
@@ -407,6 +445,7 @@ namespace GraduateProject
             this.backButton.TabIndex = 18;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // groupBox5
             // 
@@ -425,6 +464,45 @@ namespace GraduateProject
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thép tại nhịp";
+            // 
+            // muyCenterTxt
+            // 
+            this.muyCenterTxt.AutoSize = true;
+            this.muyCenterTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.muyCenterTxt.Location = new System.Drawing.Point(30, 116);
+            this.muyCenterTxt.Name = "muyCenterTxt";
+            this.muyCenterTxt.Size = new System.Drawing.Size(49, 16);
+            this.muyCenterTxt.TabIndex = 12;
+            this.muyCenterTxt.Text = "000000";
+            this.muyCenterTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AsCenterSelectTxt
+            // 
+            this.AsCenterSelectTxt.AutoSize = true;
+            this.AsCenterSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsCenterSelectTxt.Location = new System.Drawing.Point(158, 88);
+            this.AsCenterSelectTxt.Name = "AsCenterSelectTxt";
+            this.AsCenterSelectTxt.Size = new System.Drawing.Size(49, 16);
+            this.AsCenterSelectTxt.TabIndex = 11;
+            this.AsCenterSelectTxt.Text = "000000";
+            this.AsCenterSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // resultCenterTxt
+            // 
+            this.resultCenterTxt.AutoSize = true;
+            this.resultCenterTxt.Location = new System.Drawing.Point(104, 116);
+            this.resultCenterTxt.Name = "resultCenterTxt";
+            this.resultCenterTxt.Size = new System.Drawing.Size(103, 16);
+            this.resultCenterTxt.TabIndex = 10;
+            this.resultCenterTxt.Text = "Không thỏa mãn";
+            this.resultCenterTxt.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // radiusCentertxt
+            // 
+            this.radiusCentertxt.Location = new System.Drawing.Point(95, 55);
+            this.radiusCentertxt.Name = "radiusCentertxt";
+            this.radiusCentertxt.Size = new System.Drawing.Size(121, 22);
+            this.radiusCentertxt.TabIndex = 9;
             // 
             // label16
             // 
@@ -581,83 +659,6 @@ namespace GraduateProject
             this.showInfoButton.TabIndex = 22;
             this.showInfoButton.Text = "Xem thông tin đã lưu";
             this.showInfoButton.UseVisualStyleBackColor = true;
-            // 
-            // radiusEdgeTxt
-            // 
-            this.radiusEdgeTxt.Location = new System.Drawing.Point(95, 57);
-            this.radiusEdgeTxt.Name = "radiusEdgeTxt";
-            this.radiusEdgeTxt.Size = new System.Drawing.Size(121, 22);
-            this.radiusEdgeTxt.TabIndex = 8;
-            // 
-            // radiusCentertxt
-            // 
-            this.radiusCentertxt.Location = new System.Drawing.Point(95, 55);
-            this.radiusCentertxt.Name = "radiusCentertxt";
-            this.radiusCentertxt.Size = new System.Drawing.Size(121, 22);
-            this.radiusCentertxt.TabIndex = 9;
-            // 
-            // resultEdgeTxt
-            // 
-            this.resultEdgeTxt.AutoSize = true;
-            this.resultEdgeTxt.Location = new System.Drawing.Point(104, 116);
-            this.resultEdgeTxt.Name = "resultEdgeTxt";
-            this.resultEdgeTxt.Size = new System.Drawing.Size(103, 16);
-            this.resultEdgeTxt.TabIndex = 9;
-            this.resultEdgeTxt.Text = "Không thỏa mãn";
-            // 
-            // resultCenterTxt
-            // 
-            this.resultCenterTxt.AutoSize = true;
-            this.resultCenterTxt.Location = new System.Drawing.Point(104, 116);
-            this.resultCenterTxt.Name = "resultCenterTxt";
-            this.resultCenterTxt.Size = new System.Drawing.Size(103, 16);
-            this.resultCenterTxt.TabIndex = 10;
-            this.resultCenterTxt.Text = "Không thỏa mãn";
-            this.resultCenterTxt.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // AsEdgeSelectTxt
-            // 
-            this.AsEdgeSelectTxt.AutoSize = true;
-            this.AsEdgeSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AsEdgeSelectTxt.Location = new System.Drawing.Point(167, 88);
-            this.AsEdgeSelectTxt.Name = "AsEdgeSelectTxt";
-            this.AsEdgeSelectTxt.Size = new System.Drawing.Size(49, 16);
-            this.AsEdgeSelectTxt.TabIndex = 10;
-            this.AsEdgeSelectTxt.Text = "000000";
-            this.AsEdgeSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // AsCenterSelectTxt
-            // 
-            this.AsCenterSelectTxt.AutoSize = true;
-            this.AsCenterSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AsCenterSelectTxt.Location = new System.Drawing.Point(158, 88);
-            this.AsCenterSelectTxt.Name = "AsCenterSelectTxt";
-            this.AsCenterSelectTxt.Size = new System.Drawing.Size(49, 16);
-            this.AsCenterSelectTxt.TabIndex = 11;
-            this.AsCenterSelectTxt.Text = "000000";
-            this.AsCenterSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // muyEdgeTxt
-            // 
-            this.muyEdgeTxt.AutoSize = true;
-            this.muyEdgeTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.muyEdgeTxt.Location = new System.Drawing.Point(30, 117);
-            this.muyEdgeTxt.Name = "muyEdgeTxt";
-            this.muyEdgeTxt.Size = new System.Drawing.Size(49, 16);
-            this.muyEdgeTxt.TabIndex = 11;
-            this.muyEdgeTxt.Text = "000000";
-            this.muyEdgeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // muyCenterTxt
-            // 
-            this.muyCenterTxt.AutoSize = true;
-            this.muyCenterTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.muyCenterTxt.Location = new System.Drawing.Point(30, 116);
-            this.muyCenterTxt.Name = "muyCenterTxt";
-            this.muyCenterTxt.Size = new System.Drawing.Size(49, 16);
-            this.muyCenterTxt.TabIndex = 12;
-            this.muyCenterTxt.Text = "000000";
-            this.muyCenterTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Caculate
             // 

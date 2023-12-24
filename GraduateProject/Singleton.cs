@@ -83,6 +83,11 @@ namespace GraduateProject
             MessageBox.Show($"Không có thông tin của vật liệu {type}");
             return new Steel();
         }
+        public List<StructureData> structureDatas = new List<StructureData>();
+        public void SaveData(StructureData data)
+        {
+            structureDatas.Add(data);
+        }
     }
 
 }

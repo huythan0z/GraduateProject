@@ -76,6 +76,12 @@
     <Compile Include="Caculate.Designer.cs">
       <DependentUpon>Caculate.cs</DependentUpon>
     </Compile>
+    <Compile Include="SavedStructure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavedStructure.Designer.cs">
+      <DependentUpon>SavedStructure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Singleton.cs" />
     <EmbeddedResource Include="Material.resx">
       <DependentUpon>Material.cs</DependentUpon>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="Caculate.resx">
       <DependentUpon>Caculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SavedStructure.resx">
+      <DependentUpon>SavedStructure.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

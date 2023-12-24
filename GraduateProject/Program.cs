@@ -33,16 +33,11 @@ namespace GraduateProject
                 //Lấy danh sách dầm
                 ElementCategoryFilter frames = new ElementCategoryFilter(BuiltInCategory.OST_StructuralFraming);
                 IList<Element> frameList = col.WherePasses(frames).WhereElementIsNotElementType().ToElements();
-                //Log check 
-                StringBuilder outPut = new StringBuilder($"Số lượng : {frameList.Count} \n");
                 foreach (Element item in frameList)
                 {
-                    string elementName = item.Id.IntegerValue.ToString();
                     ElementType type = uiDoc.Document.GetElement(item.GetTypeId()) as ElementType;
                     Parameter h = type.LookupParameter("h");
                     Parameter b = type.LookupParameter("b");
-                    outPut.Append(elementName);
-                    outPut.AppendLine();
                     var data = new FrameData()
                     {
                         Id = item.Id.IntegerValue,
@@ -52,7 +47,6 @@ namespace GraduateProject
                     };
                     framingDatas.Add(data);
                 }
-                MessageBox.Show(outPut.ToString());
             }
             private double ConvertFeetToMili(double value)
             {

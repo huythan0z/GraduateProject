@@ -32,7 +32,6 @@ namespace GraduateProject
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
-                  
         }
         private void saveMaterial_Click(object sender, EventArgs e)
         {
@@ -41,6 +40,7 @@ namespace GraduateProject
             Concrete concrete = new Concrete();
             concrete.type = (ConcreteType)Enum.Parse(typeof(ConcreteType), typeConcreteCbb.SelectedItem.ToString());
             Singleton.Instance.AddMaterialToData(concrete, steel);
+            MessageBox.Show("Lưu thành công");
         }
 
         private void typeConcreteCbb_SelectedIndexChanged(object sender, EventArgs e)

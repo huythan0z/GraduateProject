@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace GraduateProject
 {
+
     public class FrameData
     {
         public int Id;
@@ -44,5 +45,20 @@ namespace GraduateProject
     {
         CB300V,
         CB400V,
+    }
+    public class StructureData
+    {
+        public int ID;
+        public int Level;
+        public double MomenEdge;
+        public int QuantityEdge;
+        public int RadiusEdge;
+        public double AsEdgeSelect;
+        public double AsEdge;
+        public double MomenCenter;
+        public int QuantityCenter;
+        public int RadiusCenter;
+        public double AsCenterSelect;
+        public double AsCenter;
     }
 }
