@@ -86,7 +86,22 @@ namespace GraduateProject
         public List<StructureData> structureDatas = new List<StructureData>();
         public void SaveData(StructureData data)
         {
-            structureDatas.Add(data);
+            var newData = structureDatas.Find(x => x.ID == data.ID);
+            if(newData != null)
+            {
+                for (int i = 0; i < structureDatas.Count; i++)
+                {
+                    if (newData.ID == structureDatas[i].ID)
+                    {
+                        structureDatas[i] = data;
+                    }
+                }
+            }
+            else
+            {
+                structureDatas.Add(data);
+            }
+
         }
     }
 

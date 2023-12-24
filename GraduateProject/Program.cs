@@ -12,10 +12,10 @@ using System.Xml;
 
 namespace GraduateProject
 {
-    internal static class Program
-    {
+    //internal static class Program
+    //{
         [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
-        public class Class1 : IExternalCommand
+        public class Program : IExternalCommand
         {   
             private List<FrameData> framingDatas = new List<FrameData>();
             public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
@@ -53,7 +53,6 @@ namespace GraduateProject
                 double newValue = Math.Round(UnitUtils.Convert(value, DisplayUnitType.DUT_DECIMAL_FEET, DisplayUnitType.DUT_MILLIMETERS), 2);
                 return newValue;
             }
-
         }
-    }
+    //}
 }

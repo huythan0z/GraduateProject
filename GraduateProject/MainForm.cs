@@ -44,5 +44,10 @@ namespace GraduateProject
             caculate.Show();
             
         }
+
+        private void listItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

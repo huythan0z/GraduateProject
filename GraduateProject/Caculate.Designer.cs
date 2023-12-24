@@ -436,6 +436,7 @@ namespace GraduateProject
             this.drawButton.TabIndex = 17;
             this.drawButton.Text = "Vẽ kết cấu";
             this.drawButton.UseVisualStyleBackColor = true;
+            this.drawButton.Click += new System.EventHandler(this.drawButton_Click);
             // 
             // backButton
             // 
@@ -659,6 +660,7 @@ namespace GraduateProject
             this.showInfoButton.TabIndex = 22;
             this.showInfoButton.Text = "Xem thông tin đã lưu";
             this.showInfoButton.UseVisualStyleBackColor = true;
+            this.showInfoButton.Click += new System.EventHandler(this.showInfoButton_Click);
             // 
             // Caculate
             // 

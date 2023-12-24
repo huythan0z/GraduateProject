@@ -29,6 +29,7 @@ namespace GraduateProject
             {
                 listItemCbb.Items.Add(_frameData[i].Id);
             }
+            
             foreach(var item in Enum.GetValues(typeof(ConcreteType)))
             {
                 concreteCbb.Items.Add(item);
@@ -66,9 +67,24 @@ namespace GraduateProject
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-
+            StructureData data = new StructureData();
+            data.ID = int.Parse(listItemCbb.SelectedItem.ToString());
+            data.Level = 0;//int.Parse(listFloorCbb.SelectedItem.ToString());
+            data.MomenEdge = double.Parse(mEdgeTxt.Text);
+            data.QuantityEdge = int.Parse(quantitySteelEdgeTxt.Text);
+            data.RadiusEdge = int.Parse(radiusEdgeTxt.Text);
+            data.AsEdgeSelect = double.Parse(AsEdgeSelectTxt.Text);
+            data.AsEdge = AsEdge;
+            data.MomenCenter = double.Parse(mCenterTxt.Text);
+            data.QuantityCenter = int.Parse(quantitySteelCenterTxt.Text);
+            data.RadiusCenter = int.Parse(radiusCentertxt.Text);
+            data.AsCenterSelect = double.Parse(mCenterTxt.Text);
+            data.AsCenter = AsCenter;
+            Singleton.Instance.SaveData(data);
+            MessageBox.Show("Lưu thành công");
         }
-
+        private double AsEdge;
+        private double AsCenter;
         private void checkButton_Click(object sender, EventArgs e)
         {
             int a0 = 50;
@@ -77,7 +93,7 @@ namespace GraduateProject
             int quantityEdge = int.Parse(quantitySteelEdgeTxt.Text);
             int radiusEdge = int.Parse(radiusEdgeTxt.Text);
             //Tính thép chọn 
-            double AsEdge = quantityEdge * Math.PI * radiusEdge * radiusEdge / 4;
+            AsEdge = quantityEdge * Math.PI * radiusEdge * radiusEdge / 4;
             AsEdgeSelectTxt.Text = Math.Round(AsEdge, 2).ToString();
             double muyEdge = AsEdge / (width * (height - a0));
             muyEdgeTxt.Text = Math.Round(muyEdge, 2).ToString();
@@ -95,7 +111,7 @@ namespace GraduateProject
             double mCenter = double.Parse(mCenterTxt.Text);
             int quantityCenter = int.Parse(quantitySteelCenterTxt.Text);
             int radiusCenter = int.Parse(radiusCentertxt.Text);
-            double AsCenter = quantityCenter * Math.PI * radiusCenter * radiusCenter / 4;
+            AsCenter = quantityCenter * Math.PI * radiusCenter * radiusCenter / 4;
             AsCenterSelectTxt.Text = Math.Round(AsCenter, 2).ToString();
             double muyCenter = AsCenter / (width * (height - a0));
             muyCenterTxt.Text = Math.Round(muyCenter, 2).ToString();
@@ -163,6 +179,17 @@ namespace GraduateProject
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void showInfoButton_Click(object sender, EventArgs e)
+        {
+            SavedStructure savedStructure = new SavedStructure(Singleton.Instance.structureDatas);
+            savedStructure.Show();
+        }
+
+        private void drawButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

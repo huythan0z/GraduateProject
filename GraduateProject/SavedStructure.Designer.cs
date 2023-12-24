@@ -29,132 +29,134 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.momenGoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nGoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rGoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AsGoiChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AsGoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.momentNhip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nNhip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rNhip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AsNhipChon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AsNhip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.floor,
-            this.momenGoi,
-            this.nGoi,
-            this.rGoi,
-            this.AsGoiChon,
-            this.AsGoi,
-            this.momentNhip,
-            this.nNhip,
-            this.rNhip,
-            this.AsNhipChon,
-            this.AsNhip});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1069, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(1008, 410);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Id
+            // Column1
             // 
-            this.Id.HeaderText = "ID dầm";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 60;
             // 
-            // floor
+            // Column2
             // 
-            this.floor.HeaderText = "Tầng";
-            this.floor.MinimumWidth = 6;
-            this.floor.Name = "floor";
-            this.floor.Width = 50;
+            this.Column2.HeaderText = "Level";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 50;
             // 
-            // momenGoi
+            // Column3
             // 
-            this.momenGoi.HeaderText = "Momen Gối";
-            this.momenGoi.MinimumWidth = 6;
-            this.momenGoi.Name = "momenGoi";
-            this.momenGoi.Width = 125;
+            this.Column3.HeaderText = "Momen Gối";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
-            // nGoi
+            // Column4
             // 
-            this.nGoi.HeaderText = "n";
-            this.nGoi.MinimumWidth = 6;
-            this.nGoi.Name = "nGoi";
-            this.nGoi.Width = 30;
+            this.Column4.HeaderText = "n";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 30;
             // 
-            // rGoi
+            // Column5
             // 
-            this.rGoi.HeaderText = "Φ";
-            this.rGoi.MinimumWidth = 6;
-            this.rGoi.Name = "rGoi";
-            this.rGoi.Width = 30;
+            this.Column5.HeaderText = "ϕ";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 30;
             // 
-            // AsGoiChon
+            // Column6
             // 
-            this.AsGoiChon.HeaderText = "As Chọn";
-            this.AsGoiChon.MinimumWidth = 6;
-            this.AsGoiChon.Name = "AsGoiChon";
-            this.AsGoiChon.Width = 125;
+            this.Column6.HeaderText = "As chọn";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
-            // AsGoi
+            // Column7
             // 
-            this.AsGoi.HeaderText = "As Tính";
-            this.AsGoi.MinimumWidth = 6;
-            this.AsGoi.Name = "AsGoi";
-            this.AsGoi.Width = 125;
+            this.Column7.HeaderText = "As Tính";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
-            // momentNhip
+            // Column8
             // 
-            this.momentNhip.HeaderText = "Momen Nhịp";
-            this.momentNhip.MinimumWidth = 6;
-            this.momentNhip.Name = "momentNhip";
-            this.momentNhip.Width = 125;
+            this.Column8.HeaderText = "Momen Nhịp";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
-            // nNhip
+            // Column9
             // 
-            this.nNhip.HeaderText = "n";
-            this.nNhip.MinimumWidth = 6;
-            this.nNhip.Name = "nNhip";
-            this.nNhip.Width = 30;
+            this.Column9.HeaderText = "n";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 30;
             // 
-            // rNhip
+            // Column10
             // 
-            this.rNhip.HeaderText = "Φ";
-            this.rNhip.MinimumWidth = 6;
-            this.rNhip.Name = "rNhip";
-            this.rNhip.Width = 30;
+            this.Column10.HeaderText = "ϕ";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 30;
             // 
-            // AsNhipChon
+            // Column11
             // 
-            this.AsNhipChon.HeaderText = "As Chọn";
-            this.AsNhipChon.MinimumWidth = 6;
-            this.AsNhipChon.Name = "AsNhipChon";
-            this.AsNhipChon.Width = 125;
+            this.Column11.HeaderText = "As chọn";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 125;
             // 
-            // AsNhip
+            // Column12
             // 
-            this.AsNhip.HeaderText = "As Tính";
-            this.AsNhip.MinimumWidth = 6;
-            this.AsNhip.Name = "AsNhip";
-            this.AsNhip.Width = 125;
+            this.Column12.HeaderText = "As Tính";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 125;
             // 
             // SavedStructure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 450);
+            this.ClientSize = new System.Drawing.Size(1031, 436);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SavedStructure";
             this.Text = "SavedStructure";
@@ -166,17 +168,17 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn floor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn momenGoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nGoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rGoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AsGoiChon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AsGoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn momentNhip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nNhip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rNhip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AsNhipChon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AsNhip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
     }
 }

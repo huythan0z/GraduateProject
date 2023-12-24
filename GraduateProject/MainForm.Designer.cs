@@ -54,6 +54,7 @@ namespace GraduateProject
             this.listItem.RowTemplate.Height = 24;
             this.listItem.Size = new System.Drawing.Size(554, 198);
             this.listItem.TabIndex = 0;
+            this.listItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listItem_CellContentClick);
             // 
             // columnIndex
             // 
