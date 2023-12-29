@@ -59,6 +59,7 @@ namespace GraduateProject
             heightColumnTxt.Text = _frameData[index].height.ToString();
             width = _frameData[index].width;
             height = _frameData[index].height;
+            Singleton.Instance.SelectItemOnUI((int)listItemCbb.Items[index]);
         }
         private void label22_Click(object sender, EventArgs e)
         {
@@ -189,7 +190,8 @@ namespace GraduateProject
 
         private void drawButton_Click(object sender, EventArgs e)
         {
-
+            Singleton.Instance.GetFaces((int)listItemCbb.Items[index]);
         }
+       
     }
 }

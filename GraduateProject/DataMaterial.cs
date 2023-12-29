@@ -11,7 +11,7 @@ namespace GraduateProject
     public class FrameData
     {
         public int Id;
-        public int Level;
+        public string Level;
         public double width;
         public double height;
     }
