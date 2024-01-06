@@ -36,6 +36,7 @@ namespace GraduateProject
             this.Height = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.setMaterialButton = new System.Windows.Forms.Button();
             this.selectSteelButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@ namespace GraduateProject
             this.Floor,
             this.Width,
             this.Height});
-            this.listItem.Location = new System.Drawing.Point(12, 12);
+            this.listItem.Location = new System.Drawing.Point(12, 55);
             this.listItem.Name = "listItem";
             this.listItem.RowHeadersWidth = 51;
             this.listItem.RowTemplate.Height = 24;
@@ -86,7 +87,7 @@ namespace GraduateProject
             // 
             // setMaterialButton
             // 
-            this.setMaterialButton.Location = new System.Drawing.Point(587, 12);
+            this.setMaterialButton.Location = new System.Drawing.Point(92, 276);
             this.setMaterialButton.Name = "setMaterialButton";
             this.setMaterialButton.Size = new System.Drawing.Size(100, 50);
             this.setMaterialButton.TabIndex = 2;
@@ -96,7 +97,7 @@ namespace GraduateProject
             // 
             // selectSteelButton
             // 
-            this.selectSteelButton.Location = new System.Drawing.Point(587, 160);
+            this.selectSteelButton.Location = new System.Drawing.Point(379, 276);
             this.selectSteelButton.Name = "selectSteelButton";
             this.selectSteelButton.Size = new System.Drawing.Size(100, 50);
             this.selectSteelButton.TabIndex = 3;
@@ -104,11 +105,22 @@ namespace GraduateProject
             this.selectSteelButton.UseVisualStyleBackColor = true;
             this.selectSteelButton.Click += new System.EventHandler(this.selectSteelButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(88, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(391, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "PHẦN MỀM TÍNH TOÁN CỐT THÉP DẦM";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 248);
+            this.ClientSize = new System.Drawing.Size(581, 347);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.selectSteelButton);
             this.Controls.Add(this.setMaterialButton);
             this.Controls.Add(this.listItem);
@@ -116,6 +128,7 @@ namespace GraduateProject
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.listItem)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,5 +141,6 @@ namespace GraduateProject
         private System.Windows.Forms.DataGridViewTextBoxColumn Floor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Width;
         private System.Windows.Forms.DataGridViewTextBoxColumn Height;
+        private System.Windows.Forms.Label label1;
     }
 }

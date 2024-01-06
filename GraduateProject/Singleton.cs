@@ -146,10 +146,8 @@ namespace GraduateProject
             {
                 foreach (Edge edge in items)
                 {
-                    XYZ pointCompare1, pointCompare2;
-                    pointCompare1 = edge.AsCurve().GetEndPoint(0);
-                    pointCompare2 = edge.AsCurve().GetEndPoint(1);
-
+                    XYZ pointCompare1 = MathHelper.ConvertPoint(edge.AsCurve().GetEndPoint(0));
+                    XYZ pointCompare2 = MathHelper.ConvertPoint(edge.AsCurve().GetEndPoint(1));
                     if (listPoint.Count == 0)
                     {
                         listPoint.Add(pointCompare1);
@@ -157,24 +155,36 @@ namespace GraduateProject
                     }
                     else
                     {
-                        bool checkPoint = false;
-                        for (int i = 0; i < listPoint.Count; i++)
+                        var newPoint1 = listPoint.ToList().Find(x => x.X == pointCompare1.X &&
+                        x.Y == pointCompare1.Y && x.Z == pointCompare1.Z);
+                        if (newPoint1 == null)
                         {
-                            checkPoint = checkPoint || listPoint[i] == pointCompare1;
+                            listPoint.Add(pointCompare1);
                         }
-                        if (!checkPoint)
+                        var newPoint2 = listPoint.ToList().Find(x => x.X == pointCompare2.X &&
+                        x.Y == pointCompare2.Y && x.Z == pointCompare2.Z);
+                        if (newPoint2 == null)
                         {
-                            listPoint.Add(edge.AsCurve().GetEndPoint(0));
+                            listPoint.Add(pointCompare2);
                         }
-                        checkPoint = false;
-                        for (int i = 0; i < listPoint.Count; i++)
-                        {
-                            checkPoint = checkPoint || listPoint[i] == pointCompare2;
-                        }
-                        if (!checkPoint)
-                        {
-                            listPoint.Add(edge.AsCurve().GetEndPoint(1));
-                        }
+                        //bool checkPoint = false;
+                        //for (int i = 0; i < listPoint.Count; i++)
+                        //{
+                        //    checkPoint = checkPoint || listPoint[i] == pointCompare1;
+                        //}
+                        //if (!checkPoint)
+                        //{
+                        //    listPoint.Add(edge.AsCurve().GetEndPoint(0));
+                        //}
+                        //checkPoint = false;
+                        //for (int i = 0; i < listPoint.Count; i++)
+                        //{
+                        //    checkPoint = checkPoint || listPoint[i] == pointCompare2;
+                        //}
+                        //if (!checkPoint)
+                        //{
+                        //    listPoint.Add(edge.AsCurve().GetEndPoint(1));
+                        //}
                     }
                 }
             }

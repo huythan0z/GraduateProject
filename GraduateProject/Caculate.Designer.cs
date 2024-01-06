@@ -63,7 +63,6 @@ namespace GraduateProject
             this.widthColumnTxt = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.checkButton = new System.Windows.Forms.Button();
-            this.autoSetButton = new System.Windows.Forms.Button();
             this.drawButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -88,6 +87,10 @@ namespace GraduateProject
             this.label22 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.showInfoButton = new System.Windows.Forms.Button();
+            this.AsEdgeRequireTxt = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.AsCenterRequireTxt = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -146,15 +149,17 @@ namespace GraduateProject
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.muyEdgeTxt);
+            this.groupBox2.Controls.Add(this.AsEdgeRequireTxt);
+            this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.AsEdgeSelectTxt);
+            this.groupBox2.Controls.Add(this.muyEdgeTxt);
             this.groupBox2.Controls.Add(this.resultEdgeTxt);
             this.groupBox2.Controls.Add(this.radiusEdgeTxt);
-            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.quantitySteelEdgeTxt);
             this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(267, 83);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(231, 144);
@@ -166,28 +171,28 @@ namespace GraduateProject
             // 
             this.muyEdgeTxt.AutoSize = true;
             this.muyEdgeTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.muyEdgeTxt.Location = new System.Drawing.Point(30, 117);
+            this.muyEdgeTxt.Location = new System.Drawing.Point(30, 118);
             this.muyEdgeTxt.Name = "muyEdgeTxt";
-            this.muyEdgeTxt.Size = new System.Drawing.Size(49, 16);
+            this.muyEdgeTxt.Size = new System.Drawing.Size(14, 16);
             this.muyEdgeTxt.TabIndex = 11;
-            this.muyEdgeTxt.Text = "000000";
+            this.muyEdgeTxt.Text = "0";
             this.muyEdgeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AsEdgeSelectTxt
             // 
             this.AsEdgeSelectTxt.AutoSize = true;
             this.AsEdgeSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AsEdgeSelectTxt.Location = new System.Drawing.Point(167, 88);
+            this.AsEdgeSelectTxt.Location = new System.Drawing.Point(71, 88);
             this.AsEdgeSelectTxt.Name = "AsEdgeSelectTxt";
-            this.AsEdgeSelectTxt.Size = new System.Drawing.Size(49, 16);
+            this.AsEdgeSelectTxt.Size = new System.Drawing.Size(14, 16);
             this.AsEdgeSelectTxt.TabIndex = 10;
-            this.AsEdgeSelectTxt.Text = "000000";
+            this.AsEdgeSelectTxt.Text = "0";
             this.AsEdgeSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // resultEdgeTxt
             // 
             this.resultEdgeTxt.AutoSize = true;
-            this.resultEdgeTxt.Location = new System.Drawing.Point(104, 116);
+            this.resultEdgeTxt.Location = new System.Drawing.Point(122, 117);
             this.resultEdgeTxt.Name = "resultEdgeTxt";
             this.resultEdgeTxt.Size = new System.Drawing.Size(103, 16);
             this.resultEdgeTxt.TabIndex = 9;
@@ -203,7 +208,7 @@ namespace GraduateProject
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 116);
+            this.label6.Location = new System.Drawing.Point(6, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 16);
             this.label6.TabIndex = 6;
@@ -214,9 +219,9 @@ namespace GraduateProject
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 88);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 16);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Diện tích thép";
+            this.label5.Text = "As Chọn :";
             // 
             // label4
             // 
@@ -413,20 +418,11 @@ namespace GraduateProject
             // 
             this.checkButton.Location = new System.Drawing.Point(518, 12);
             this.checkButton.Name = "checkButton";
-            this.checkButton.Size = new System.Drawing.Size(120, 29);
+            this.checkButton.Size = new System.Drawing.Size(120, 65);
             this.checkButton.TabIndex = 15;
             this.checkButton.Text = "Kiểm tra";
             this.checkButton.UseVisualStyleBackColor = true;
             this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
-            // 
-            // autoSetButton
-            // 
-            this.autoSetButton.Location = new System.Drawing.Point(518, 48);
-            this.autoSetButton.Name = "autoSetButton";
-            this.autoSetButton.Size = new System.Drawing.Size(120, 29);
-            this.autoSetButton.TabIndex = 16;
-            this.autoSetButton.Text = "Chọn tự động";
-            this.autoSetButton.UseVisualStyleBackColor = true;
             // 
             // drawButton
             // 
@@ -451,10 +447,12 @@ namespace GraduateProject
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.muyCenterTxt);
+            this.groupBox5.Controls.Add(this.AsCenterRequireTxt);
+            this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Controls.Add(this.AsCenterSelectTxt);
             this.groupBox5.Controls.Add(this.resultCenterTxt);
-            this.groupBox5.Controls.Add(this.radiusCentertxt);
             this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.radiusCentertxt);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Controls.Add(this.quantitySteelCenterTxt);
@@ -470,28 +468,29 @@ namespace GraduateProject
             // 
             this.muyCenterTxt.AutoSize = true;
             this.muyCenterTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.muyCenterTxt.Location = new System.Drawing.Point(30, 116);
+            this.muyCenterTxt.Location = new System.Drawing.Point(30, 113);
             this.muyCenterTxt.Name = "muyCenterTxt";
-            this.muyCenterTxt.Size = new System.Drawing.Size(49, 16);
+            this.muyCenterTxt.Size = new System.Drawing.Size(14, 16);
             this.muyCenterTxt.TabIndex = 12;
-            this.muyCenterTxt.Text = "000000";
+            this.muyCenterTxt.Text = "0";
             this.muyCenterTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.muyCenterTxt.Click += new System.EventHandler(this.muyCenterTxt_Click);
             // 
             // AsCenterSelectTxt
             // 
             this.AsCenterSelectTxt.AutoSize = true;
             this.AsCenterSelectTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AsCenterSelectTxt.Location = new System.Drawing.Point(158, 88);
+            this.AsCenterSelectTxt.Location = new System.Drawing.Point(71, 88);
             this.AsCenterSelectTxt.Name = "AsCenterSelectTxt";
-            this.AsCenterSelectTxt.Size = new System.Drawing.Size(49, 16);
+            this.AsCenterSelectTxt.Size = new System.Drawing.Size(14, 16);
             this.AsCenterSelectTxt.TabIndex = 11;
-            this.AsCenterSelectTxt.Text = "000000";
+            this.AsCenterSelectTxt.Text = "0";
             this.AsCenterSelectTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // resultCenterTxt
             // 
             this.resultCenterTxt.AutoSize = true;
-            this.resultCenterTxt.Location = new System.Drawing.Point(104, 116);
+            this.resultCenterTxt.Location = new System.Drawing.Point(122, 113);
             this.resultCenterTxt.Name = "resultCenterTxt";
             this.resultCenterTxt.Size = new System.Drawing.Size(103, 16);
             this.resultCenterTxt.TabIndex = 10;
@@ -508,20 +507,21 @@ namespace GraduateProject
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 116);
+            this.label16.Location = new System.Drawing.Point(6, 113);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(20, 16);
             this.label16.TabIndex = 6;
             this.label16.Text = "μ :";
+            this.label16.Click += new System.EventHandler(this.label16_Click_1);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(6, 88);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 16);
+            this.label17.Size = new System.Drawing.Size(55, 16);
             this.label17.TabIndex = 4;
-            this.label17.Text = "Diện tích thép";
+            this.label17.Text = "As chọn";
             // 
             // label18
             // 
@@ -644,7 +644,7 @@ namespace GraduateProject
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(637, 280);
+            this.saveButton.Location = new System.Drawing.Point(637, 285);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(115, 49);
             this.saveButton.TabIndex = 21;
@@ -654,7 +654,7 @@ namespace GraduateProject
             // 
             // showInfoButton
             // 
-            this.showInfoButton.Location = new System.Drawing.Point(516, 280);
+            this.showInfoButton.Location = new System.Drawing.Point(516, 285);
             this.showInfoButton.Name = "showInfoButton";
             this.showInfoButton.Size = new System.Drawing.Size(115, 49);
             this.showInfoButton.TabIndex = 22;
@@ -662,11 +662,51 @@ namespace GraduateProject
             this.showInfoButton.UseVisualStyleBackColor = true;
             this.showInfoButton.Click += new System.EventHandler(this.showInfoButton_Click);
             // 
+            // AsEdgeRequireTxt
+            // 
+            this.AsEdgeRequireTxt.AutoSize = true;
+            this.AsEdgeRequireTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsEdgeRequireTxt.Location = new System.Drawing.Point(185, 88);
+            this.AsEdgeRequireTxt.Name = "AsEdgeRequireTxt";
+            this.AsEdgeRequireTxt.Size = new System.Drawing.Size(14, 16);
+            this.AsEdgeRequireTxt.TabIndex = 13;
+            this.AsEdgeRequireTxt.Text = "0";
+            this.AsEdgeRequireTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(120, 88);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(58, 16);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "As Tính :";
+            // 
+            // AsCenterRequireTxt
+            // 
+            this.AsCenterRequireTxt.AutoSize = true;
+            this.AsCenterRequireTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AsCenterRequireTxt.Location = new System.Drawing.Point(185, 88);
+            this.AsCenterRequireTxt.Name = "AsCenterRequireTxt";
+            this.AsCenterRequireTxt.Size = new System.Drawing.Size(14, 16);
+            this.AsCenterRequireTxt.TabIndex = 13;
+            this.AsCenterRequireTxt.Text = "0";
+            this.AsCenterRequireTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(120, 88);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 16);
+            this.label25.TabIndex = 12;
+            this.label25.Text = "As Tính :";
+            // 
             // Caculate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 393);
+            this.ClientSize = new System.Drawing.Size(775, 388);
             this.Controls.Add(this.showInfoButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.groupBox7);
@@ -674,7 +714,6 @@ namespace GraduateProject
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.drawButton);
-            this.Controls.Add(this.autoSetButton);
             this.Controls.Add(this.checkButton);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -732,7 +771,6 @@ namespace GraduateProject
         private System.Windows.Forms.TextBox mMaxTxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button checkButton;
-        private System.Windows.Forms.Button autoSetButton;
         private System.Windows.Forms.Button drawButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -761,5 +799,9 @@ namespace GraduateProject
         private System.Windows.Forms.Label AsCenterSelectTxt;
         private System.Windows.Forms.Label muyEdgeTxt;
         private System.Windows.Forms.Label muyCenterTxt;
+        private System.Windows.Forms.Label AsEdgeRequireTxt;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label AsCenterRequireTxt;
+        private System.Windows.Forms.Label label25;
     }
 }

@@ -33,11 +33,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.ebTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rbtTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rbTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Steel = new System.Windows.Forms.GroupBox();
@@ -45,11 +45,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.esTxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.rscTxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.rsTxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.saveMaterial = new System.Windows.Forms.Button();
@@ -64,11 +64,11 @@
             this.Concrete.Controls.Add(this.label7);
             this.Concrete.Controls.Add(this.label6);
             this.Concrete.Controls.Add(this.label5);
-            this.Concrete.Controls.Add(this.textBox3);
+            this.Concrete.Controls.Add(this.ebTxt);
             this.Concrete.Controls.Add(this.label4);
-            this.Concrete.Controls.Add(this.textBox2);
+            this.Concrete.Controls.Add(this.rbtTxt);
             this.Concrete.Controls.Add(this.label3);
-            this.Concrete.Controls.Add(this.textBox1);
+            this.Concrete.Controls.Add(this.rbTxt);
             this.Concrete.Controls.Add(this.label2);
             this.Concrete.Controls.Add(this.label1);
             this.Concrete.Location = new System.Drawing.Point(12, 12);
@@ -114,12 +114,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "kN/m2";
             // 
-            // textBox3
+            // ebTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(55, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 7;
+            this.ebTxt.Location = new System.Drawing.Point(55, 110);
+            this.ebTxt.Name = "ebTxt";
+            this.ebTxt.Size = new System.Drawing.Size(100, 22);
+            this.ebTxt.TabIndex = 7;
             // 
             // label4
             // 
@@ -130,12 +130,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Eb :";
             // 
-            // textBox2
+            // rbtTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(55, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 5;
+            this.rbtTxt.Location = new System.Drawing.Point(55, 82);
+            this.rbtTxt.Name = "rbtTxt";
+            this.rbtTxt.Size = new System.Drawing.Size(100, 22);
+            this.rbtTxt.TabIndex = 5;
             // 
             // label3
             // 
@@ -146,12 +146,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Rbt :";
             // 
-            // textBox1
+            // rbTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.rbTxt.Location = new System.Drawing.Point(55, 54);
+            this.rbTxt.Name = "rbTxt";
+            this.rbTxt.Size = new System.Drawing.Size(100, 22);
+            this.rbTxt.TabIndex = 3;
             // 
             // label2
             // 
@@ -177,11 +177,11 @@
             this.Steel.Controls.Add(this.label8);
             this.Steel.Controls.Add(this.label9);
             this.Steel.Controls.Add(this.label10);
-            this.Steel.Controls.Add(this.textBox4);
+            this.Steel.Controls.Add(this.esTxt);
             this.Steel.Controls.Add(this.label11);
-            this.Steel.Controls.Add(this.textBox5);
+            this.Steel.Controls.Add(this.rscTxt);
             this.Steel.Controls.Add(this.label12);
-            this.Steel.Controls.Add(this.textBox6);
+            this.Steel.Controls.Add(this.rsTxt);
             this.Steel.Controls.Add(this.label13);
             this.Steel.Controls.Add(this.label14);
             this.Steel.Location = new System.Drawing.Point(270, 12);
@@ -227,12 +227,12 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "kN/m2";
             // 
-            // textBox4
+            // esTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(55, 110);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 7;
+            this.esTxt.Location = new System.Drawing.Point(55, 110);
+            this.esTxt.Name = "esTxt";
+            this.esTxt.Size = new System.Drawing.Size(100, 22);
+            this.esTxt.TabIndex = 7;
             // 
             // label11
             // 
@@ -243,12 +243,12 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Es :";
             // 
-            // textBox5
+            // rscTxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(55, 82);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 5;
+            this.rscTxt.Location = new System.Drawing.Point(55, 82);
+            this.rscTxt.Name = "rscTxt";
+            this.rscTxt.Size = new System.Drawing.Size(100, 22);
+            this.rscTxt.TabIndex = 5;
             // 
             // label12
             // 
@@ -259,12 +259,12 @@
             this.label12.TabIndex = 4;
             this.label12.Text = "Rsc :";
             // 
-            // textBox6
+            // rsTxt
             // 
-            this.textBox6.Location = new System.Drawing.Point(55, 54);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 3;
+            this.rsTxt.Location = new System.Drawing.Point(55, 54);
+            this.rsTxt.Name = "rsTxt";
+            this.rsTxt.Size = new System.Drawing.Size(100, 22);
+            this.rsTxt.TabIndex = 3;
             // 
             // label13
             // 
@@ -327,11 +327,11 @@
 
         private System.Windows.Forms.GroupBox Concrete;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox ebTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox rbtTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox rbTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -340,11 +340,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox esTxt;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox rscTxt;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox rsTxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button saveMaterial;

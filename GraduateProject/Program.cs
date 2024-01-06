@@ -44,15 +44,14 @@ namespace GraduateProject
             foreach (Element item in frameList)
             {
                 ElementType type = uiDoc.Document.GetElement(item.GetTypeId()) as ElementType;
-                
-                //Kích thước sàn
-                //BoundingBoxXYZ boundingBox = item.get_BoundingBox(null);
-                //// Tính toán chiều dài và rộng
-                //double length = boundingBox.Max.X - boundingBox.Min.X;
-                //double width = boundingBox.Max.Y - boundingBox.Min.Y;
+
 
                 Parameter h = type.LookupParameter("h");
                 Parameter b = type.LookupParameter("b");
+
+                //Parameter l = item.LookupParameter("Volume");
+                //MessageBox.Show(l.AsDouble().ToString());
+
                 var data = new FrameData();
                 data.Id = item.Id.IntegerValue;
                 data.Level = item.LevelId.ToString();

@@ -29,8 +29,11 @@ namespace GraduateProject
             {
                 listItemCbb.Items.Add(_frameData[i].Id);
             }
-            
-            foreach(var item in Enum.GetValues(typeof(ConcreteType)))
+            for (int i = 0; i < _frameData.Count; i++)
+            {
+                listFloorCbb.Items.Add(_frameData[i].Level);
+            }
+            foreach (var item in Enum.GetValues(typeof(ConcreteType)))
             {
                 concreteCbb.Items.Add(item);
             }
@@ -192,6 +195,15 @@ namespace GraduateProject
         {
             Singleton.Instance.GetFaces((int)listItemCbb.Items[index]);
         }
-       
+
+        private void muyCenterTxt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

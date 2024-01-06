@@ -25,7 +25,7 @@ namespace GraduateProject
             {
                 listItem.Rows.Add(framingDatas[i]);
                 listItem.Rows[i].Cells[0].Value = framingDatas[i].Id;
-                listItem.Rows[i].Cells[1].Value = framingDatas[i].Level;
+                listItem.Rows[i].Cells[1].Value = "1";
                 listItem.Rows[i].Cells[2].Value = framingDatas[i].width;
                 listItem.Rows[i].Cells[3].Value = framingDatas[i].height;
             }
@@ -47,7 +47,6 @@ namespace GraduateProject
 
         private void listItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
+        } 
     }
 }
